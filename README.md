@@ -96,7 +96,7 @@ src/
 * `provider`: LLM提供商，目前支持"deepseek"
 * `model`: 模型名称，默认为"deepseek-chat"
 * `temperature`: 温度参数，控制生成的随机性
-* `max_tokens`: 最大令牌数
+* `max_tokens`: 最大token数
 
 ### 邮件配置 (EmailConfig)
 * `smtp_server`: SMTP服务器地址
