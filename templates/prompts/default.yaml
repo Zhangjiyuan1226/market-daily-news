@@ -1,0 +1,43 @@
+analysis_steps:
+- items:
+  - description: 评估该新闻影响的市场范围大小
+    name: 市场影响范围
+    range: 1-5分
+  - description: 评估与政策法规的关联程度
+    name: 政策关联强度
+    range: 1-5分
+  - description: 评估时间敏感度
+    name: 时效紧迫性
+    range: 1-5分
+  name: 影响评分
+- items:
+  - description: 市场影响*0.4 + 政策关联*0.3 + 时效紧迫*0.3
+    name: 总分计算
+  - description: 筛选总分最高的5条新闻进行详细分析
+    name: 筛选规则
+  name: 加权计算规则
+name: default
+output_format:
+  market_summary:
+    bond_trend: 整体债市趋势预测
+    equity_trend: 整体股市趋势预测
+    risk_warning: 主要风险提示
+  top_news:
+  - bond_impact:
+      intensity: ★★
+      long_term: 长期债市影响分析
+      short_term: 短期债市影响分析
+    equity_impact:
+      intensity: ★★★
+      long_term: 长期股市影响分析
+      short_term: 短期股市影响分析
+    news_content: 新闻标题和简介
+    suggestion: 建议在金融市场进行什么操作
+    impact: 对新闻带来的影响进行分析
+    original_index: 原始新闻序号
+    scores:
+      market_impact: 分数
+      policy_relevance: 分数
+      time_urgency: 分数
+      weighted_total: 总分
+system_prompt: 你是一位资深金融市场分析师，请基于以下24小时内财经新闻进行专业分析。

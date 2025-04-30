@@ -1,0 +1,43 @@
+name: default
+subject: "财经新闻分析报告 - {date}"
+sections:
+- name: header
+  template: '<h1>财经新闻分析报告</h1><p>分析时间: {current_time}</p>'
+- name: news_list
+  template: <h2>五大重要财经新闻</h2>{news_items}
+- name: market_summary
+  template: "\n                    <div class=\"summary-section\">\n             \
+    \           <h3>市场总结</h3>\n                        <div><strong>股市趋势:</strong>\
+    \ {equity_trend}</div>\n                        <div><strong>债市趋势:</strong> {bond_trend}</div>\n\
+    \                        <div class=\"risk\"><strong>风险提示:</strong> {risk_warning}</div>\n\
+    \                    </div>\n                    "
+styles:
+  body:
+    color: '#333'
+    font-family: Arial, sans-serif
+    line-height: '1.6'
+    margin: 20px
+  h1:
+    color: '#2c3e50'
+  h2:
+    color: '#2c3e50'
+  h3:
+    color: '#2c3e50'
+  news_item:
+    border-left: '4px solid #3498db'
+    margin-bottom: 30px
+    padding-left: 15px
+  news_title:
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 5px
+  summary_section:
+    background-color: '#f8f9fa'
+    border-radius: 5px
+    margin-top: 30px
+    padding: 15px
+  impact-section:
+    margin-top: 10px
+  impact-title:
+    font-weight: bold
+    margin-bottom: 5px
