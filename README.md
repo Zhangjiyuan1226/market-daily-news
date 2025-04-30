@@ -44,8 +44,8 @@ src/
 
 1. **克隆仓库(如适用)**:
    ```bash
-   git clone <仓库地址>
-   cd <项目目录>
+   git clone market-daily-news
+   cd market-daily-news
    ```
 
 2. **安装依赖**:
